@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ServeUp — Jogos para aproveitar enquanto seu pedido é preparado.">
+<title>ServeUp — Jogos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="jogos">
+<div class="background"><div class="background-glow background-glow-1"></div><div class="background-glow background-glow-2"></div></div>
+<section class="screen active" id="telaJogos">
+<div class="card pedido-preparo-card jogos-tela-card">
+<div class="jogos-hub-header">
+<div class="jogos-hub-texto"><span class="section-kicker">CENTRAL DE ENTRETENIMENTO</span><h2 class="jogos-titulo">Enquanto seu pedido não chega...</h2><p class="jogos-subtitulo">Escolha um jogo e aproveite a espera.</p></div>
+<button class="btn-secundario jogos-voltar" id="btnVoltarDosJogos" type="button">← VOLTAR AO PEDIDO</button>
+</div>
+
+<div class="jogos-tabs" role="tablist">
+<button class="jogo-tab active" id="tabKart" type="button">🏁 Corrida ServeUp</button>
+<button class="jogo-tab" id="tabVelha" type="button">⭕ Jogo da Velha</button>
+<button class="jogo-tab" id="tabFrango" type="button">🍗 Flappy Bird</button>
+</div>
+<div class="jogo-view active" id="jogoKart">
+<p class="jogo-descricao">Clique em INICIAR CORRIDA para começar. Depois, clique nos botões para virar e desviar dos carros. A pista fica mais rápida conforme você avança.</p>
+<div class="kart-placar">
+<span>PONTOS <strong id="kartPontos">0</strong></span>
+<span>VELOCIDADE <strong id="kartVelocidade">0</strong></span>
+</div>
+<div class="kart-jogo-wrapper">
+<canvas class="kart-canvas" height="420" id="kartCanvas" width="720"></canvas>
+<div class="kart-gameover hidden" id="kartGameOver">
+<div class="kart-gameover-card">
+<div class="kart-gameover-title">GAME OVER</div>
+<p class="kart-gameover-score">Você bateu no obstáculo!<strong><span id="kartGameOverPontos">0</span> pontos</strong></p>
+<button class="btn-principal" id="btnTentarNovamenteKart" type="button">🔄 JOGAR NOVAMENTE</button>
+<button class="btn-secundario" id="btnGameOverVoltar" type="button">← VOLTAR PARA OS JOGOS</button>
+</div>
+</div>
+</div>
+<div class="kart-controles">
+<button class="btn-secundario" id="kartEsquerda" type="button">◀ ESQUERDA</button>
+<button class="btn-secundario" id="kartDireita" type="button">DIREITA ▶</button>
+</div>
+<p class="kart-status" id="kartStatus">Clique em INICIAR CORRIDA para começar. Clique nos botões para virar.</p>
+<button class="btn-principal" id="btnIniciarKart" type="button">🏁 INICIAR CORRIDA</button>
+</div>
+<div class="jogo-view hidden" id="jogoVelha">
+<p class="jogo-descricao" id="velhaDescricao">Escolha o modo de jogo e faça três em linha!</p>
+<div class="velha-modos" role="group" aria-label="Modo de jogo">
+<button class="velha-modo active" id="modoVelhaIA" type="button">🤖 Contra IA</button>
+<button class="velha-modo" id="modoVelhaAmigo" type="button">👥 Contra alguém</button>
+</div>
+<div class="velha-placares">
+<div class="velha-placar-bloco active" id="placarModoIA"><div class="velha-placar-titulo">🤖 CONTRA IA</div><div class="velha-placar-linha"><span>VOCÊ <b id="placarIAVoce">0</b></span><span>IA <b id="placarIAIa">0</b></span><span>EMPATES <b id="placarIAEmpates">0</b></span></div></div>
+<div class="velha-placar-bloco" id="placarModoAmigo"><div class="velha-placar-titulo">👥 CONTRA ALGUÉM</div><div class="velha-placar-linha"><span>JOGADOR X <b id="placarAmigoX">0</b></span><span>JOGADOR O <b id="placarAmigoO">0</b></span><span>EMPATES <b id="placarAmigoEmpates">0</b></span></div></div>
+</div>
+<div aria-label="Jogo da velha" class="velha-tabuleiro" id="velhaTabuleiro"></div>
+<p class="velha-status" id="velhaStatus">Sua vez. Escolha uma casa.</p>
+<div class="velha-acoes"><button class="btn-principal" id="btnNovaVelha" type="button">NOVA PARTIDA</button><button class="btn-secundario" id="btnZerarVelha" type="button">ZERAR PLACAR</button></div>
+</div>
+<div class="jogo-view hidden" id="jogoFrango">
+<p class="jogo-descricao">Toque na tela para bater as asas e desviar dos garfos. Cada garfo desviado vale 1 ponto!</p>
+<div class="kart-placar">
+<span>PONTOS <strong id="frangoPontos">0</strong></span>
+<span>RECORDE <strong id="frangoRecorde">0</strong></span>
+</div>
+<div class="frango-jogo-wrapper">
+<canvas class="frango-canvas" height="520" id="frangoCanvas" width="380"></canvas>
+<div class="frango-gameover hidden" id="frangoGameOver">
+<div class="frango-gameover-card">
+<div class="frango-gameover-title">GAME OVER</div>
+<p class="frango-gameover-score">Você perdeu!<strong><span id="frangoGameOverPontos">0</span> pontos</strong></p>
+<button class="btn-principal" id="btnTentarNovamenteFrango" type="button">🔄 JOGAR NOVAMENTE</button>
+<button class="btn-secundario" id="btnGameOverVoltarFrango" type="button">← VOLTAR PARA OS JOGOS</button>
+</div>
+</div>
+</div>
+<p class="kart-status" id="frangoStatus">Clique em INICIAR VOO ou toque na tela para começar.</p>
+<button class="btn-principal" id="btnIniciarFrango" type="button">🍗 INICIAR VOO</button>
+</div>
+
+</div>
+</section>
+<script src="../js/data.js" defer></script>
+<script src="../js/auth.js" defer></script>
+<script src="../js/recomendacoes.js" defer></script>
+<script src="../js/administrador.js" defer></script>
+<script src="../js/cardapio.js" defer></script>
+<script src="../js/carrinho.js" defer></script>
+<script src="../js/pedidos.js" defer></script>
+<script src="../js/jogos.js" defer></script>
+<script src="../js/app.js" defer></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{ const b=document.getElementById('btnVoltarDosJogos'); if(b) b.addEventListener('click',()=>{ if(typeof pararCorridaKart==='function') pararCorridaKart(); window.location.href='pedido-preparo.html'; }); });</script>
+</body>
+</html>

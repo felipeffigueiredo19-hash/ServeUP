@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ServeUp — Cardápio inteligente baseado no seu humor.">
+<title>ServeUp — Humor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="humor">
+
+<div class="background">
+  <div class="background-glow background-glow-1"></div>
+  <div class="background-glow background-glow-2"></div>
+</div>
+
+<section class="screen active" id="telaHumor">
+<button class="btn-top-left" id="btnVoltarInicio" type="button">
+            ← INÍCIO
+        </button>
+<div class="card humor-card">
+<span class="section-kicker">
+                PRIMEIRO PASSO
+            </span>
+<h2>
+                Como você está hoje?
+            </h2>
+<p class="section-description">
+
+                Escolha seu humor e o ServeUp
+                encontrará uma sugestão para combinar
+                com o seu momento.
+
+            </p>
+<div class="emoji-grid">
+<!-- FELIZ -->
+<button class="emoji-card" data-humor="feliz" type="button">
+<div class="emoji-card-icon">
+                        😊
+                    </div>
+<div class="emoji-card-text">
+<h4>
+                            Feliz
+                        </h4>
+<p>
+                            Quero aproveitar esse momento!
+                        </p>
+</div>
+<span class="emoji-arrow">
+                        →
+                    </span>
+</button>
+<!-- CANSADO -->
+<button class="emoji-card" data-humor="cansado" type="button">
+<div class="emoji-card-icon">
+                        😴
+                    </div>
+<div class="emoji-card-text">
+<h4>
+                            Cansado
+                        </h4>
+<p>
+                            Preciso de uma refeição reconfortante.
+                        </p>
+</div>
+<span class="emoji-arrow">
+                        →
+                    </span>
+</button>
+<!-- TRISTE -->
+<button class="emoji-card" data-humor="triste" type="button">
+<div class="emoji-card-icon">
+                        😢
+                    </div>
+<div class="emoji-card-text">
+<h4>
+                            Triste
+                        </h4>
+<p>
+                            Quero algo que melhore meu dia.
+                        </p>
+</div>
+<span class="emoji-arrow">
+                        →
+                    </span>
+</button>
+<!-- ESTRESSADO -->
+<button class="emoji-card" data-humor="estressante" type="button">
+<div class="emoji-card-icon">
+                        😡
+                    </div>
+<div class="emoji-card-text">
+<h4>
+                            Estressado
+                        </h4>
+<p>
+                            Preciso relaxar e comer bem.
+                        </p>
+</div>
+<span class="emoji-arrow">
+                        →
+                    </span>
+</button>
+<!-- PREFIRO NÃO DIZER -->
+<button class="emoji-card humor-sem-emoji" data-humor="nao-dizer" type="button">
+<div class="emoji-card-icon emoji-card-icon-sem-emoji">
+                        —
+                    </div>
+<div class="emoji-card-text">
+<h4>
+                            Prefiro não dizer
+                        </h4>
+<p>
+                            Quero uma recomendação geral.
+                        </p>
+</div>
+<span class="emoji-arrow">
+                        →
+                    </span>
+</button>
+</div>
+<p class="humor-footer">
+                Sua escolha será usada apenas para encontrar uma sugestão.
+            </p>
+</div>
+</section>
+<script src="../js/data.js" defer></script>
+<script src="../js/auth.js" defer></script>
+<script src="../js/recomendacoes.js" defer></script>
+<script src="../js/administrador.js" defer></script>
+<script src="../js/cardapio.js" defer></script>
+<script src="../js/carrinho.js" defer></script>
+<script src="../js/pedidos.js" defer></script>
+<script src="../js/jogos.js" defer></script>
+<script src="../js/app.js" defer></script>
+</body>
+</html>

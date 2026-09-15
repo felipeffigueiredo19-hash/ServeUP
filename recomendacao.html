@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ServeUp — Cardápio inteligente baseado no seu humor.">
+<title>ServeUp — Recomendação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="recomendacao">
+
+<div class="background">
+  <div class="background-glow background-glow-1"></div>
+  <div class="background-glow background-glow-2"></div>
+</div>
+
+<section class="screen active" id="telaRecomendacao">
+<button class="btn-top-left" id="btnVoltar" type="button">
+            ← OUTRO HUMOR
+        </button>
+<div class="card recomendacao-card">
+<span class="section-kicker">
+                SUGESTÃO DO SERVEUP
+            </span>
+<h2>
+                Recomendação do Chef 👨‍🍳
+            </h2>
+<p class="section-description">
+
+                Baseado no seu humor,
+                encontramos algo especial para você.
+
+            </p>
+<div class="prato-destaque">
+<div class="prato-imagem-container">
+<span class="prato-tag" id="tagRecomendacao">
+                        ESCOLHA DO CHEF
+                    </span>
+<img alt="Prato recomendado" id="imgPrato" onerror="this.style.display='none'" src="../imagens/parmegiana.jpg"/>
+</div>
+<div class="prato-info">
+<h3 id="nomePrato">
+                        Parmegiana
+                    </h3>
+<p id="descRecomendacao">
+
+                        Bife empanado, molho de tomate, presunto, queijo e arroz.
+
+                    </p>
+<div class="prato-info-footer">
+<span class="prato-preco" id="precoPrato">
+                            R$ 42,00
+                        </span>
+</div>
+</div>
+</div>
+<div class="recomendacao-acoes">
+<button class="btn-secundario btn-trocar-sugestao" id="btnTrocarSugestao" type="button">↻ TROCAR SUGESTÃO</button>
+<button class="btn-principal" id="btnEscolherSugestao" type="button">
+
+                    ADICIONAR RECOMENDAÇÃO AO CARRINHO
+
+                </button>
+<button class="btn-secundario" id="btnCardapioCompleto" type="button">
+
+                    VER CARDÁPIO COMPLETO
+
+                </button>
+</div>
+</div>
+</section>
+<script src="../js/data.js" defer></script>
+<script src="../js/auth.js" defer></script>
+<script src="../js/recomendacoes.js" defer></script>
+<script src="../js/administrador.js" defer></script>
+<script src="../js/cardapio.js" defer></script>
+<script src="../js/carrinho.js" defer></script>
+<script src="../js/pedidos.js" defer></script>
+<script src="../js/jogos.js" defer></script>
+<script src="../js/app.js" defer></script>
+</body>
+</html>

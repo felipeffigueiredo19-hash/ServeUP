@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ServeUp — Cardápio inteligente baseado no seu humor.">
+<title>ServeUp — Pedido em Preparo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="pedido-preparo">
+
+<div class="background">
+  <div class="background-glow background-glow-1"></div>
+  <div class="background-glow background-glow-2"></div>
+</div>
+
+<section class="screen active" id="telaPedidoPreparo">
+<button class="btn-top-left" id="btnVoltarPreparo" type="button">← VOLTAR</button>
+<button class="btn-cancelar-pedido" id="btnCancelarPedido" type="button">CANCELAR PEDIDO E VOLTAR PARA A TELA INICIAL</button>
+<div class="card pedido-preparo-card">
+<div class="pedido-preparo-icone">🍳</div>
+<span class="section-kicker">PEDIDO RECEBIDO</span>
+<h2 class="preparo-titulo">Seu pedido está sendo preparado!</h2>
+<p class="section-description preparo-subtitulo">Pedido <strong id="numeroPedidoPreparo">#000</strong> recebido com sucesso. Nossa equipe já está preparando tudo para você.</p>
+<div class="status-pedido-preparo" aria-label="Status do pedido">
+  <div class="status-preparo-etapa ativa">
+    <span class="status-preparo-bolinha">✓</span>
+    <span>Recebido</span>
+  </div>
+  <div class="status-preparo-linha"></div>
+  <div class="status-preparo-etapa ativa">
+    <span class="status-preparo-bolinha">2</span>
+    <span>Preparando</span>
+  </div>
+  <div class="status-preparo-linha"></div>
+  <div class="status-preparo-etapa">
+    <span class="status-preparo-bolinha">3</span>
+    <span>Pronto</span>
+  </div>
+</div>
+<p class="section-description preparo-subtitulo">Relaxe! Nossa equipe já está preparando tudo para você.</p>
+<!-- ESTIMATIVA DE TEMPO -->
+<div class="estimativa-preparo">
+<div class="estimativa-icone">⏱️</div>
+<div class="estimativa-info">
+<span class="estimativa-label">TEMPO ESTIMADO</span>
+<strong class="estimativa-tempo" id="estimativaTempo">15 a 20 min</strong>
+<span class="estimativa-sub">tempo estimado para o pedido ficar pronto</span>
+</div>
+</div>
+<!-- BOTÕES DE AÇÃO -->
+<div class="preparo-acoes">
+<button class="btn-jogar" id="btnAbrirJogos" type="button">
+<span class="btn-jogar-icone">🎮</span>
+<span class="btn-jogar-texto">
+<strong>Jogar enquanto espera</strong>
+<small>Corrida ServeUp</small>
+</span>
+</button>
+<button class="btn-chamar-garcom" id="btnChamarGarcom" type="button">
+<span class="btn-garcom-icone">🔔</span>
+<span class="btn-garcom-texto">
+<strong>Chamar o garçom</strong>
+<small>Precisando de algo?</small>
+</span>
+</button>
+
+<button class="btn-novo-pedido" id="btnNovoPedidoPreparo" type="button">
+<span class="btn-garcom-icone">🛒</span>
+<span class="btn-garcom-texto">
+<strong>Fazer novo pedido</strong>
+<small>Voltar ao cardápio e escolher mais itens</small>
+</span>
+</button>
+</div>
+
+
+</div>
+</section>
+<script src="../js/data.js" defer></script>
+<script src="../js/auth.js" defer></script>
+<script src="../js/recomendacoes.js" defer></script>
+<script src="../js/administrador.js" defer></script>
+<script src="../js/cardapio.js" defer></script>
+<script src="../js/carrinho.js" defer></script>
+<script src="../js/pedidos.js" defer></script>
+<script src="../js/jogos.js" defer></script>
+<script src="../js/app.js" defer></script>
+</body>
+</html>

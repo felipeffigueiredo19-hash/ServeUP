@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ServeUp — Administrador</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="administrador">
+
+<div class="background">
+  <div class="background-glow background-glow-1"></div>
+  <div class="background-glow background-glow-2"></div>
+</div>
+
+<main class="screen active">
+  <div class="card" style="width:min(1100px,100%);">
+    <button id="btnVoltarAdminCardapio" class="btn-top-left" type="button">← CARDÁPIO</button>
+    <span class="section-kicker">ÁREA DO ADMINISTRADOR</span>
+    <h2>Gerenciar ServeUp</h2>
+    <p class="section-description">Administre produtos, recomendações e informações do sistema.</p>
+    <div class="admin-actions" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;">
+      <button id="btnAdminDashboard" class="btn-adm-painel" type="button">📊 PAINEL ADM</button>
+      <button id="btnAdminGerenciar" class="btn-adm-painel" type="button">⚙ GERENCIAR</button>
+      <button id="btnAdminAdicionar" class="btn-adm-comida" type="button">+ ADICIONAR ITEM</button>
+      <button id="btnAdminSair" class="btn-adm-sair" type="button">SAIR</button>
+    </div>
+  </div>
+</main>
+<div class="modal-adm hidden" id="modalPainelAdm">
+<div class="modal-adm-card painel-adm-card">
+<button class="modal-adm-fechar" id="btnFecharPainelAdm" type="button">×</button>
+<span class="section-kicker">ÁREA DO ADMINISTRADOR</span>
+<h2>Painel do ServeUp</h2>
+<p class="modal-adm-subtitulo">Acompanhe os principais dados do sistema.</p>
+<div class="painel-adm-status">
+<span>● SISTEMA ONLINE</span>
+<strong id="painelAdmUsuario">ADM</strong>
+</div>
+<div class="painel-adm-grid">
+<div class="painel-adm-card-info">
+<span>🍽️</span>
+<small>ITENS NO CARDÁPIO</small>
+<strong id="painelTotalProdutos">0</strong>
+</div>
+<div class="painel-adm-card-info">
+<span>📦</span>
+<small>PEDIDOS REALIZADOS</small>
+<strong id="painelTotalPedidos">0</strong>
+</div>
+<div class="painel-adm-card-info">
+<span>🆕</span>
+<small>ITENS ADICIONADOS PELO ADM</small>
+<strong id="painelProdutosAdm">0</strong>
+</div>
+<div class="painel-adm-card-info">
+<span>😊</span>
+<small>HUMOR MAIS ESCOLHIDO</small>
+<strong id="painelHumorMaisEscolhido">Nenhum</strong>
+</div>
+</div>
+<div class="painel-adm-secao">
+<div>
+<span class="section-kicker">RESUMO</span>
+<h3>Informações do sistema</h3>
+</div>
+<div class="painel-adm-linhas">
+<div><span>Pratos</span><strong id="painelPratos">0</strong></div>
+<div><span>Bebidas</span><strong id="painelBebidas">0</strong></div>
+<div><span>Sobremesas</span><strong id="painelSobremesas">0</strong></div>
+</div>
+</div>
+<button class="btn-principal" id="btnAtualizarPainelAdm" type="button">ATUALIZAR PAINEL</button>
+</div>
+</div><div class="modal-adm hidden" id="modalGerenciarAdm">
+<div class="modal-adm-card painel-gerenciar-card">
+<button class="modal-adm-fechar" id="btnFecharGerenciarAdm" type="button">×</button>
+<span class="section-kicker">ÁREA DO ADMINISTRADOR</span>
+<h2>Gerenciar ServeUp</h2>
+<p class="modal-adm-subtitulo">Edite os produtos do cardápio e escolha quais aparecem nas sugestões de cada humor.</p>
+<div class="adm-gerenciar-secao">
+<span class="section-kicker">CARDÁPIO</span>
+<div class="adm-produtos-cabecalho">
+<h3>Produtos</h3>
+<button id="btnRestaurarPratosCodigo" class="adm-btn-restaurar-produtos" type="button">↻ RESTAURAR PRATOS</button>
+</div>
+<p class="adm-ajuda">Excluir remove o produto permanentemente do cardápio neste navegador. O botão acima restaura somente os produtos que foram cadastrados diretamente no código.</p>
+<div class="adm-gerenciar-lista" id="listaGerenciarProdutos"></div>
+<div class="adm-editor-produto hidden" id="editorProdutoAdm">
+<span class="section-kicker">EDITANDO PRODUTO</span>
+<h3 id="editorProdutoTitulo">Editar produto</h3>
+<input id="editorProdutoId" type="hidden"/>
+<div class="adm-editor-linha">
+<label>Nome
+                            <input id="editorProdutoNome" maxlength="60" type="text"/>
+</label>
+<label>Preço
+                            <input id="editorProdutoPreco" min="0.01" step="0.01" type="number"/>
+</label>
+</div>
+<div class="adm-campos-abas" data-tabs="produto-editor">
+<div class="adm-campo-abas-botoes" role="tablist" aria-label="Informações do produto">
+<button class="adm-campo-aba active" type="button" data-tab-target="editorDescricao">📝 DESCRIÇÃO</button>
+<button class="adm-campo-aba" type="button" data-tab-target="editorIngredientes">🥗 INGREDIENTES</button>
+</div>
+<div class="adm-campo-aba-conteudo active" id="editorDescricao" data-tab-panel>
+<label>Descrição
+<textarea id="editorProdutoDescricao" maxlength="300" placeholder="Ex.: Bife grelhado acompanhado de arroz." required></textarea>
+</label>
+</div>
+<div class="adm-campo-aba-conteudo" id="editorIngredientes" data-tab-panel>
+<label>Ingredientes
+<textarea id="editorProdutoIngredientes" maxlength="500" placeholder="Ex.: bife bovino, arroz, cebola e temperos." required></textarea>
+</label>
+</div>
+</div>
+<label>Imagem do produto (opcional)
+                        <input accept="image/*" id="editorProdutoImagemArquivo" type="file"/>
+<small>Você pode escolher uma imagem do seu computador.</small>
+</label>
+<label>Caminho ou URL da imagem
+                        <input id="editorProdutoImagem" maxlength="500" placeholder="imagens/produto.jpg ou https://..." type="text"/>
+</label>
+<div class="adm-editor-acoes">
+<button class="btn-principal" id="btnConfirmarAlteracaoProduto" type="button">✓ CONFIRMAR ALTERAÇÃO</button>
+<button class="adm-btn-cancelar" id="btnCancelarAlteracaoProduto" type="button">CANCELAR</button>
+</div>
+</div>
+</div>
+<div class="adm-gerenciar-secao">
+<span class="section-kicker">RECOMENDAÇÕES</span>
+<h3>Produtos sugeridos por humor</h3>
+<p class="adm-ajuda">Escolha os dois produtos que serão mostrados para cada humor. As alterações ficam salvas neste navegador.</p>
+<div class="adm-recomendacoes-lista" id="listaRecomendacoesAdm"></div>
+</div>
+</div>
+</div><div class="modal-adm hidden" id="modalAdicionarComida">
+<div class="modal-adm-card">
+<button class="modal-adm-fechar" id="btnFecharAdicionarComida" type="button">×</button>
+<span class="section-kicker">ÁREA DO ADMINISTRADOR</span>
+<h2>Adicionar comida</h2>
+<p class="modal-adm-subtitulo">Cadastre um novo item no cardápio.</p>
+<form class="form-adm-comida" id="formAdicionarComida">
+<label>
+                    Nome da comida
+                    <input id="novaComidaNome" maxlength="60" placeholder="Ex.: Hambúrguer Artesanal" required="" type="text"/>
+</label>
+<label>
+                    Preço
+                    <input id="novaComidaPreco" min="0.01" placeholder="25.90" required="" step="0.01" type="number"/>
+</label>
+<div class="adm-campos-abas" data-tabs="produto-novo">
+<div class="adm-campo-abas-botoes" role="tablist" aria-label="Informações do novo produto">
+<button class="adm-campo-aba active" type="button" data-tab-target="novaDescricao">📝 DESCRIÇÃO</button>
+<button class="adm-campo-aba" type="button" data-tab-target="novaIngredientes">🥗 INGREDIENTES</button>
+</div>
+<div class="adm-campo-aba-conteudo active" id="novaDescricao" data-tab-panel>
+<label>Descrição
+<textarea id="novaComidaDescricao" maxlength="180" placeholder="Ex.: Prato servido com molho caseiro." required></textarea>
+</label>
+</div>
+<div class="adm-campo-aba-conteudo" id="novaIngredientes" data-tab-panel>
+<label>Ingredientes
+<textarea id="novaComidaIngredientes" maxlength="500" placeholder="Ex.: carne, molho, arroz e temperos." required></textarea>
+</label>
+</div>
+</div>
+<label>
+                    Categoria
+                    <select id="novaComidaCategoria" required="">
+<option value="pratos">Pratos</option>
+<option value="bebidas">Bebidas</option>
+<option value="sobremesas">Sobremesas</option>
+</select>
+</label>
+<label>
+                    Imagem do produto (opcional)
+                    <input accept="image/*" id="novaComidaImagemArquivo" type="file"/>
+<small>Você pode escolher uma imagem do seu computador.</small>
+</label>
+<label>
+                    Caminho ou URL da imagem (opcional)
+                    <input id="novaComidaImagem" maxlength="500" placeholder="imagens/hamburguer.jpg ou https://..." type="text"/>
+</label>
+<p class="erro-adm-comida" id="erroAdicionarComida"></p>
+<button class="btn-principal" type="submit">ADICIONAR AO CARDÁPIO</button>
+</form>
+</div>
+</div>
+<script src="../js/data.js" defer></script>
+<script src="../js/auth.js" defer></script>
+<script src="../js/recomendacoes.js" defer></script>
+<script src="../js/administrador.js" defer></script>
+<script src="../js/cardapio.js" defer></script>
+<script src="../js/carrinho.js" defer></script>
+<script src="../js/pedidos.js" defer></script>
+<script src="../js/jogos.js" defer></script>
+<script src="../js/app.js" defer></script>
+</body>
+</html>

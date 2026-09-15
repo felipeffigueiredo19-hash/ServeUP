@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ServeUp — Cardápio inteligente baseado no seu humor.">
+<title>ServeUp — Confirmar Pedido</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="pedido">
+
+<div class="background">
+  <div class="background-glow background-glow-1"></div>
+  <div class="background-glow background-glow-2"></div>
+</div>
+
+<section class="screen active" id="telaPedido">
+<button class="btn-top-left" id="btnVoltarConfirmacao" type="button">
+            ← VOLTAR
+        </button>
+<div class="card pedido-card">
+<div class="pedido-icone">
+                ✓
+            </div>
+<span class="section-kicker">
+                QUASE PRONTO
+            </span>
+<h2>
+                Confirmar pedido
+            </h2>
+<p class="section-description">
+
+                Confira os detalhes antes de
+                enviar seu pedido.
+
+            </p>
+<div class="pedido-resumo">
+<div class="pedido-resumo-label">
+                    SEU PEDIDO
+                </div>
+<div class="pedido-resumo-itens" id="pedidoResumoItens">
+<!-- Preenchido pelo JavaScript com todos os itens do carrinho -->
+</div>
+<div class="pedido-resumo-total">
+<span>TOTAL DO PEDIDO</span>
+<strong id="precoPedido">R$ 0,00</strong>
+</div>
+</div>
+<div class="pedido-aviso">
+<span>
+                    🍽️
+                </span>
+<p>
+                    Ao confirmar, seu pedido será
+                    encaminhado para atendimento.
+                </p>
+</div>
+<button class="btn-principal" id="btnGarcom" type="button">
+
+                CONFIRMAR PEDIDO
+
+            </button>
+</div>
+</section>
+<script src="../js/data.js" defer></script>
+<script src="../js/auth.js" defer></script>
+<script src="../js/recomendacoes.js" defer></script>
+<script src="../js/administrador.js" defer></script>
+<script src="../js/cardapio.js" defer></script>
+<script src="../js/carrinho.js" defer></script>
+<script src="../js/pedidos.js" defer></script>
+<script src="../js/jogos.js" defer></script>
+<script src="../js/app.js" defer></script>
+</body>
+</html>

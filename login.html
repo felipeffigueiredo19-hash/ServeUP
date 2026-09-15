@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ServeUp — Cardápio inteligente baseado no seu humor.">
+<title>ServeUp — Login ADM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="login">
+
+<div class="background">
+  <div class="background-glow background-glow-1"></div>
+  <div class="background-glow background-glow-2"></div>
+</div>
+
+<section class="screen active" id="telaLogin">
+<div class="login-container">
+<div class="login-header">
+<span class="home-badge">SERVEUP</span>
+<div class="home-logo login-logo">🍽️</div>
+<h1 class="home-title login-title">Serve<span>Up</span></h1>
+<p class="login-subtitle">Entre para acessar o cardápio inteligente.</p>
+</div>
+<div class="login-grid login-grid-adm">
+<form class="login-card login-card-adm" id="formLoginAdm">
+<span class="section-kicker">ACESSO EXCLUSIVO</span>
+<h2>Login ADM</h2>
+<p class="login-card-description">Área restrita para administração do ServeUp.</p>
+<label class="login-label" for="admUsuario">Usuário ADM</label>
+<input autocomplete="username" class="login-input" id="admUsuario" placeholder="Usuário do administrador" required="" type="text"/>
+<label class="login-label" for="admSenha">Senha ADM</label>
+<input autocomplete="current-password" class="login-input" id="admSenha" placeholder="Senha do administrador" required="" type="password"/>
+<button class="btn-principal login-adm-button" type="submit">
+                        ENTRAR COMO ADM
+                    </button>
+<p class="login-erro" id="admErro" role="alert"></p>
+</form>
+</div>
+<button class="btn-top-left" id="btnVoltarLogin" type="button">← VOLTAR</button>
+<p class="home-footer">ACESSO SEGURO AO SERVEUP</p>
+</div>
+</section>
+<script src="../js/data.js" defer></script>
+<script src="../js/auth.js" defer></script>
+<script src="../js/recomendacoes.js" defer></script>
+<script src="../js/administrador.js" defer></script>
+<script src="../js/cardapio.js" defer></script>
+<script src="../js/carrinho.js" defer></script>
+<script src="../js/pedidos.js" defer></script>
+<script src="../js/jogos.js" defer></script>
+<script src="../js/app.js" defer></script>
+</body>
+</html>
