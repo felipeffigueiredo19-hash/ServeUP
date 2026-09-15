@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body data-page="cardapio">
 
@@ -34,7 +35,7 @@
 <div class="admin-toolbar hidden" id="adminActions">
 <div class="admin-toolbar-top">
 <span class="admin-status" id="adminStatus"><i class="admin-status-dot"></i>ADM conectado</span>
-<img alt="ServeUp" class="admin-toolbar-logo" src="../imagens/serveup-logo.png"/>
+<img alt="ServeUp" class="img-fluid admin-toolbar-logo" src="../imagens/serveup-logo.png"/>
 <button class="btn-adm-sair" id="btnSairAdm" type="button">SAIR</button>
 </div>
 <div class="admin-toolbar-center">
@@ -84,116 +85,116 @@
 <div class="cardapio-lista" id="cardapioLista">
 <!-- CARDÁPIO ATUALIZADO -->
 <article class="cardapio-item cat-pratos" data-descricao="Bife empanado, molho de tomate, presunto, queijo e arroz." data-nome="Parmegiana" data-preco="42.00" data-produto-id="parmegiana">
-<div class="produto-imagem"><img alt="Parmegiana" loading="lazy" src="../imagens/parmegiana.jpg"/><span class="produto-tag">PRATO</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Parmegiana" loading="lazy" src="../imagens/parmegiana.jpg"/><span class="produto-tag">PRATO</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Parmegiana</h4><span class="item-preco">R$ 42,00</span></div>
 <div class="item-descricao-bloco"><span class="item-descricao-titulo">Descrição</span><p class="item-descricao">Bife empanado crocante, coberto com molho de tomate, presunto e queijo mussarela, acompanhado de arroz branco.</p></div><div class="item-ingredientes-bloco"><span class="item-ingredientes-titulo">Ingredientes</span><p class="item-ingredientes">bife bovino, farinha de rosca, ovo, molho de tomate, presunto, mussarela e arroz.</p></div><div class="item-footer"><span class="item-detalhe">Refeição</span><button class="btn-adicionar-carrinho" data-produto-id="parmegiana" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-pratos" data-descricao="Macarrão, molho de tomate e carne moída." data-nome="Macarrão à Bolonhesa" data-preco="32.90" data-produto-id="macarrao-bolonhesa">
-<div class="produto-imagem"><img alt="Macarrão à Bolonhesa" loading="lazy" src="../imagens/macarrao.jpg"/><span class="produto-tag">PRATO</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Macarrão à Bolonhesa" loading="lazy" src="../imagens/macarrao.jpg"/><span class="produto-tag">PRATO</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Macarrão à Bolonhesa</h4><span class="item-preco">R$ 32,90</span></div>
 <div class="item-descricao-bloco"><span class="item-descricao-titulo">Descrição</span><p class="item-descricao">Macarrão servido com molho de tomate caseiro e carne moída bem temperada.</p></div><div class="item-ingredientes-bloco"><span class="item-ingredientes-titulo">Ingredientes</span><p class="item-ingredientes">macarrão, carne moída, molho de tomate, cebola, alho e temperos.</p></div><div class="item-footer"><span class="item-detalhe">Refeição</span><button class="btn-adicionar-carrinho" data-produto-id="macarrao-bolonhesa" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-pratos" data-descricao="Filé de frango grelhado e arroz." data-nome="Frango Grelhado" data-preco="34.90" data-produto-id="frango-grelhado">
-<div class="produto-imagem"><img alt="Frango Grelhado" loading="lazy" src="../imagens/frango grelhado.jpg"/><span class="produto-tag">PRATO</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Frango Grelhado" loading="lazy" src="../imagens/frango grelhado.jpg"/><span class="produto-tag">PRATO</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Frango Grelhado</h4><span class="item-preco">R$ 34,90</span></div>
 <div class="item-descricao-bloco"><span class="item-descricao-titulo">Descrição</span><p class="item-descricao">Filé de frango grelhado, acompanhado de arroz branco e purê de batata cremoso.</p></div><div class="item-ingredientes-bloco"><span class="item-ingredientes-titulo">Ingredientes</span><p class="item-ingredientes">filé de frango, arroz, alho, sal,batata,creme de leite e cheiro verde.</p></div><div class="item-footer"><span class="item-detalhe">Refeição</span><button class="btn-adicionar-carrinho" data-produto-id="frango-grelhado" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-pratos" data-descricao="Massa de lasanha, carne moída, molho de tomate e queijo." data-nome="Lasanha Bolonhesa" data-preco="38.90" data-produto-id="lasanha-bolonhesa">
-<div class="produto-imagem"><img alt="Lasanha Bolonhesa" loading="lazy" src="../imagens/lasanha.jpg"/><span class="produto-tag">PRATO</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Lasanha Bolonhesa" loading="lazy" src="../imagens/lasanha.jpg"/><span class="produto-tag">PRATO</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Lasanha Bolonhesa</h4><span class="item-preco">R$ 38,90</span></div>
 <div class="item-descricao-bloco"><span class="item-descricao-titulo">Descrição</span><p class="item-descricao">Camadas de massa, carne moída e molho de tomate, finalizadas com queijo derretido.</p></div><div class="item-ingredientes-bloco"><span class="item-ingredientes-titulo">Ingredientes</span><p class="item-ingredientes">massa de lasanha, carne moída, molho de tomate, cebola, alho, mussarela e parmesão.</p></div><div class="item-footer"><span class="item-detalhe">Refeição</span><button class="btn-adicionar-carrinho" data-produto-id="lasanha-bolonhesa" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-pratos" data-descricao="Bife grelhado e cebola." data-nome="Bife Acebolado" data-preco="39.90" data-produto-id="bife-acebolado">
-<div class="produto-imagem"><img alt="Bife Acebolado" loading="lazy" src="../imagens/bife.png"/><span class="produto-tag">PRATO</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Bife Acebolado" loading="lazy" src="../imagens/bife.png"/><span class="produto-tag">PRATO</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Bife Acebolado</h4><span class="item-preco">R$ 39,90</span></div>
 <div class="item-descricao-bloco"><span class="item-descricao-titulo">Descrição</span><p class="item-descricao">Bife grelhado acompanhado de cebolas douradas e bem temperadas.</p></div><div class="item-ingredientes-bloco"><span class="item-ingredientes-titulo">Ingredientes</span><p class="item-ingredientes">bife bovino, cebola, alho, sal grosso e azeite.</p></div><div class="item-footer"><span class="item-detalhe">Refeição</span><button class="btn-adicionar-carrinho" data-produto-id="bife-acebolado" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-pratos" data-descricao="Filé de frango empanado e arroz." data-nome="Frango Empanado" data-preco="36.90" data-produto-id="frango-empanado">
-<div class="produto-imagem"><img alt="Frango Empanado" loading="lazy" src="../imagens/frango.jpg"/><span class="produto-tag">PRATO</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Frango Empanado" loading="lazy" src="../imagens/frango.jpg"/><span class="produto-tag">PRATO</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Frango Empanado</h4><span class="item-preco">R$ 36,90</span></div>
 <div class="item-descricao-bloco"><span class="item-descricao-titulo">Descrição</span><p class="item-descricao">Filé de frango empanado e crocante, acompanhado de arroz branco.</p></div><div class="item-ingredientes-bloco"><span class="item-ingredientes-titulo">Ingredientes</span><p class="item-ingredientes">filé de frango, farinha de trigo, ovo, farinha de rosca, arroz, alho e sal.</p></div><div class="item-footer"><span class="item-detalhe">Refeição</span><button class="btn-adicionar-carrinho" data-produto-id="frango-empanado" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-bebidas" data-descricao="Refrigerante de cola sem açúcar, servido bem gelado." data-nome="Coca-Cola Zero Lata" data-preco="6.50" data-produto-id="coca-zero-lata">
-<div class="produto-imagem"><img alt="Coca-Cola Zero Lata" loading="lazy" src="../imagens/coca.jpg"/><span class="produto-tag">BEBIDA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Coca-Cola Zero Lata" loading="lazy" src="../imagens/coca.jpg"/><span class="produto-tag">BEBIDA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Coca-Cola Zero Lata</h4><span class="item-preco">R$ 6,50</span></div>
 </article>
 <article class="cardapio-item cat-bebidas" data-descricao="Refrigerante sabor laranja, servido bem gelado." data-nome="Fanta Laranja Lata" data-preco="6.50" data-produto-id="fanta-laranja-lata">
-<div class="produto-imagem"><img alt="Fanta Laranja Lata" loading="lazy" src="../imagens/fanta.jpg"/><span class="produto-tag">BEBIDA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Fanta Laranja Lata" loading="lazy" src="../imagens/fanta.jpg"/><span class="produto-tag">BEBIDA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Fanta Laranja Lata</h4><span class="item-preco">R$ 6,50</span></div>
 <p class="item-descricao"></p><div class="item-footer"><span class="item-detalhe">Bebida gelada</span><button class="btn-adicionar-carrinho" data-produto-id="fanta-laranja-lata" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-bebidas" data-descricao="Refrigerante sabor uva, servido bem gelado." data-nome="Fanta Uva Lata" data-preco="6.50" data-produto-id="fanta-uva-lata">
-<div class="produto-imagem"><img alt="Fanta Uva Lata" loading="lazy" src="../imagens/fanta uva.jpg"/><span class="produto-tag">BEBIDA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Fanta Uva Lata" loading="lazy" src="../imagens/fanta uva.jpg"/><span class="produto-tag">BEBIDA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Fanta Uva Lata</h4><span class="item-preco">R$ 6,50</span></div>
 <p class="item-descricao"></p><div class="item-footer"><span class="item-detalhe">Bebida gelada</span><button class="btn-adicionar-carrinho" data-produto-id="fanta-uva-lata" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-bebidas" data-descricao="Água mineral servida gelada." data-nome="Água" data-preco="4.00" data-produto-id="agua">
-<div class="produto-imagem"><img alt="Água" loading="lazy" src="../imagens/agua sem.jpg"/><span class="produto-tag">BEBIDA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Água" loading="lazy" src="../imagens/agua sem.jpg"/><span class="produto-tag">BEBIDA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Água</h4><span class="item-preco">R$ 4,00</span></div>
 <p class="item-descricao"></p><div class="item-footer"><span class="item-detalhe">Bebida gelada</span><button class="btn-adicionar-carrinho" data-produto-id="agua" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-bebidas" data-descricao="Água mineral gaseificada, servida gelada." data-nome="Água com Gás" data-preco="4.50" data-produto-id="agua-com-gas">
-<div class="produto-imagem"><img alt="Água com Gás" loading="lazy" src="../imagens/agua gas.jpg"/><span class="produto-tag">BEBIDA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Água com Gás" loading="lazy" src="../imagens/agua gas.jpg"/><span class="produto-tag">BEBIDA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Água com Gás</h4><span class="item-preco">R$ 4,50</span></div>
 <p class="item-descricao"></p><div class="item-footer"><span class="item-detalhe">Bebida gelada</span><button class="btn-adicionar-carrinho" data-produto-id="agua-com-gas" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-bebidas" data-descricao="Refrigerante de cola em garrafa de 2 litros." data-nome="Coca-Cola 2L" data-preco="13.00" data-produto-id="coca-2l">
-<div class="produto-imagem"><img alt="Coca-Cola 2L" loading="lazy" src="../imagens/coca garra.jpg"/><span class="produto-tag">BEBIDA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Coca-Cola 2L" loading="lazy" src="../imagens/coca garra.jpg"/><span class="produto-tag">BEBIDA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Coca-Cola 2L</h4><span class="item-preco">R$ 13,00</span></div>
 <p class="item-descricao"></p><div class="item-footer"><span class="item-detalhe">Bebida gelada</span><button class="btn-adicionar-carrinho" data-produto-id="coca-2l" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-bebidas" data-descricao="Refrigerante sabor limão, leve e refrescante." data-nome="Sprite Lata" data-preco="6.50" data-produto-id="sprite-lata">
-<div class="produto-imagem"><img alt="Sprite Lata" loading="lazy" src="../imagens/sprite.jpg"/><span class="produto-tag">BEBIDA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Sprite Lata" loading="lazy" src="../imagens/sprite.jpg"/><span class="produto-tag">BEBIDA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Sprite Lata</h4><span class="item-preco">R$ 6,50</span></div>
 <p class="item-descricao"></p><div class="item-footer"><span class="item-detalhe">Bebida gelada</span><button class="btn-adicionar-carrinho" data-produto-id="sprite-lata" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-bebidas" data-descricao="Suco de laranja refrescante, servido gelado." data-nome="Jarra de suco de laranja" data-preco="12.00" data-produto-id="suco-laranja-1l">
-<div class="produto-imagem"><img alt="Jarra de suco de laranja" loading="lazy" src="../imagens/orange.jpg"/><span class="produto-tag">BEBIDA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Jarra de suco de laranja" loading="lazy" src="../imagens/orange.jpg"/><span class="produto-tag">BEBIDA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Jarra de suco de laranja</h4><span class="item-preco">R$ 12,00</span></div>
 <p class="item-descricao"></p><div class="item-footer"><span class="item-detalhe">Bebida gelada</span><button class="btn-adicionar-carrinho" data-produto-id="suco-laranja-1l" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-bebidas" data-descricao="Suco de maracujá refrescante, servido gelado." data-nome="Jarra de suco de maracujá" data-preco="12.00" data-produto-id="suco-maracuja-1l">
-<div class="produto-imagem"><img alt="Jarra de suco de maracujá" loading="lazy" src="../imagens/suco mara.jpg"/><span class="produto-tag">BEBIDA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Jarra de suco de maracujá" loading="lazy" src="../imagens/suco mara.jpg"/><span class="produto-tag">BEBIDA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Jarra de suco de maracujá</h4><span class="item-preco">R$ 12,00</span></div>
 <p class="item-descricao"></p><div class="item-footer"><span class="item-detalhe">Bebida gelada</span><button class="btn-adicionar-carrinho" data-produto-id="suco-maracuja-1l" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-bebidas" data-descricao="Suco de limão refrescante, servido gelado." data-nome="Jarra de suco de limão" data-preco="11.00" data-produto-id="suco-limao-1l">
-<div class="produto-imagem"><img alt="Jarra de suco de limão" loading="lazy" src="../imagens/suco limon.jpg"/><span class="produto-tag">BEBIDA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Jarra de suco de limão" loading="lazy" src="../imagens/suco limon.jpg"/><span class="produto-tag">BEBIDA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Jarra de suco de limão</h4><span class="item-preco">R$ 11,00</span></div>
 <p class="item-descricao"></p><div class="item-footer"><span class="item-detalhe">Bebida gelada</span><button class="btn-adicionar-carrinho" data-produto-id="suco-limao-1l" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-sobremesas" data-descricao="Brownie de chocolate macio por dentro e intenso em sabor." data-nome="Brownie" data-preco="12.00" data-produto-id="brownie">
-<div class="produto-imagem"><img alt="Brownie" loading="lazy" src="../imagens/brownie.jpg"/><span class="produto-tag">SOBREMESA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Brownie" loading="lazy" src="../imagens/brownie.jpg"/><span class="produto-tag">SOBREMESA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Brownie</h4><span class="item-preco">R$ 12,00</span></div>
 <div class="item-descricao-bloco"><span class="item-descricao-titulo">Descrição</span><p class="item-descricao">Brownie de chocolate macio por dentro e crocante por fora.</p></div><div class="item-ingredientes-bloco"><span class="item-ingredientes-titulo">Ingredientes</span><p class="item-ingredientes">chocolate,   farinha de trigo, açúcar, ovos e manteiga.</p></div><div class="item-footer"><span class="item-detalhe">Sobremesa</span><button class="btn-adicionar-carrinho" data-produto-id="brownie" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-sobremesas" data-descricao="Bolinho de chocolate com centro cremoso, servido como sobremesa especial." data-nome="petit gateau" data-preco="15.00" data-produto-id="petit-gateau">
-<div class="produto-imagem"><img alt="petit-gateau" loading="lazy" src="../imagens/petit-gateau.jpg"/><span class="produto-tag">SOBREMESA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="petit-gateau" loading="lazy" src="../imagens/petit-gateau.jpg"/><span class="produto-tag">SOBREMESA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Petit Gâteau</h4><span class="item-preco">R$ 15,00</span></div>
 <div class="item-descricao-bloco"><span class="item-descricao-titulo">Descrição</span><p class="item-descricao">Bolinho de chocolate com casca assada e recheio cremoso, acompanhada de uma bola de sorvete de creme e calda de chocolate.</p></div><div class="item-ingredientes-bloco"><span class="item-ingredientes-titulo">Ingredientes</span><p class="item-ingredientes">chocolate, farinha de trigo, açúcar, ovos, manteiga e sorvete de creme.</p></div><div class="item-footer"><span class="item-detalhe">Sobremesa</span><button class="btn-adicionar-carrinho" data-produto-id="petit-gateau" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-sobremesas" data-descricao="Sorvete cremoso de baunilha, servido gelado." data-nome="Sorvete de Baunilha" data-preco="9.00" data-produto-id="sorvete-baunilha">
-<div class="produto-imagem"><img alt="Sorvete de Baunilha" loading="lazy" src="../imagens/sorvete branco.jpg"/><span class="produto-tag">SOBREMESA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Sorvete de Baunilha" loading="lazy" src="../imagens/sorvete branco.jpg"/><span class="produto-tag">SOBREMESA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Sorvete de Baunilha</h4><span class="item-preco">R$ 9,00</span></div>
 <div class="item-descricao-bloco"><span class="item-descricao-titulo">Descrição</span><p class="item-descricao">Sorvete cremoso e suave, com sabor clássico de baunilha.</p></div><div class="item-ingredientes-bloco"><span class="item-ingredientes-titulo">Ingredientes</span><p class="item-ingredientes">leite, creme de leite, açúcar e essência de baunilha.</p></div><div class="item-footer"><span class="item-detalhe">Sobremesa</span><button class="btn-adicionar-carrinho" data-produto-id="sorvete-baunilha" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-sobremesas" data-descricao="Sorvete cremoso de chocolate, servido gelado." data-nome="Sorvete de Chocolate" data-preco="9.00" data-produto-id="sorvete-chocolate">
-<div class="produto-imagem"><img alt="Sorvete de Chocolate" loading="lazy" src="../imagens/sorvete marrom.jpg"/><span class="produto-tag">SOBREMESA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Sorvete de Chocolate" loading="lazy" src="../imagens/sorvete marrom.jpg"/><span class="produto-tag">SOBREMESA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Sorvete de Chocolate</h4><span class="item-preco">R$ 9,00</span></div>
 <div class="item-descricao-bloco"><span class="item-descricao-titulo">Descrição</span><p class="item-descricao">Sorvete cremoso e intenso, preparado com sabor de chocolate.</p></div><div class="item-ingredientes-bloco"><span class="item-ingredientes-titulo">Ingredientes</span><p class="item-ingredientes">leite, creme de leite, açúcar, chocolate e cacau em pó.</p></div><div class="item-footer"><span class="item-detalhe">Sobremesa</span><button class="btn-adicionar-carrinho" data-produto-id="sorvete-chocolate" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-sobremesas" data-descricao="Gelatina leve e refrescante, ótima para finalizar a refeição." data-nome="Gelatina" data-preco="7.00" data-produto-id="gelatina">
-<div class="produto-imagem"><img alt="Gelatina" loading="lazy" src="../imagens/gelatina.jpg"/><span class="produto-tag">SOBREMESA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Gelatina" loading="lazy" src="../imagens/gelatina.jpg"/><span class="produto-tag">SOBREMESA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Gelatina</h4><span class="item-preco">R$ 7,00</span></div>
 <div class="item-descricao-bloco"><span class="item-descricao-titulo">Descrição</span><p class="item-descricao">Sobremesa leve, colorida e refrescante, perfeita para finalizar a refeição.</p></div><div class="item-ingredientes-bloco"><span class="item-ingredientes-titulo">Ingredientes</span><p class="item-ingredientes">água e pó de gelatina de morango.</p></div><div class="item-footer"><span class="item-detalhe">Sobremesa</span><button class="btn-adicionar-carrinho" data-produto-id="gelatina" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-sobremesas" data-descricao="Mousse cremoso de limão, com sabor cítrico e refrescante." data-nome="Mousse de Limão" data-preco="10.00" data-produto-id="mousse-limao">
-<div class="produto-imagem"><img alt="Mousse de Limão" loading="lazy" src="../imagens/mousse L.jpg"/><span class="produto-tag">SOBREMESA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Mousse de Limão" loading="lazy" src="../imagens/mousse L.jpg"/><span class="produto-tag">SOBREMESA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Mousse de Limão</h4><span class="item-preco">R$ 10,00</span></div>
 <div class="item-descricao-bloco"><span class="item-descricao-titulo">Descrição</span><p class="item-descricao">Mousse cremoso com sabor cítrico e refrescante de limão.</p></div><div class="item-ingredientes-bloco"><span class="item-ingredientes-titulo">Ingredientes</span><p class="item-ingredientes">leite condensado, creme de leite e suco de limão.</p></div><div class="item-footer"><span class="item-detalhe">Sobremesa</span><button class="btn-adicionar-carrinho" data-produto-id="mousse-limao" type="button">+</button></div></div>
 </article>
 <article class="cardapio-item cat-sobremesas" data-descricao="Mousse cremoso de maracujá, com sabor marcante e refrescante." data-nome="Mousse de Maracujá" data-preco="10.00" data-produto-id="mousse-maracuja">
-<div class="produto-imagem"><img alt="Mousse de Maracujá" loading="lazy" src="../imagens/mousse.jpg"/><span class="produto-tag">SOBREMESA</span></div>
+<div class="produto-imagem"><img class="img-fluid" alt="Mousse de Maracujá" loading="lazy" src="../imagens/mousse.jpg"/><span class="produto-tag">SOBREMESA</span></div>
 <div class="item-conteudo"><div class="item-topo"><h4>Mousse de Maracujá</h4><span class="item-preco">R$ 10,00</span></div>
 <div class="item-descricao-bloco"><span class="item-descricao-titulo">Descrição</span><p class="item-descricao">Mousse cremoso e aerado, com sabor marcante e refrescante de maracujá.</p></div><div class="item-ingredientes-bloco"><span class="item-ingredientes-titulo">Ingredientes</span><p class="item-ingredientes">leite condensado, creme de leite e suco da polpa do maracujá.</p></div><div class="item-footer"><span class="item-detalhe">Sobremesa</span><button class="btn-adicionar-carrinho" data-produto-id="mousse-maracuja" type="button">+</button></div></div>
 </article>
