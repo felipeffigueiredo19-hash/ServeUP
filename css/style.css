@@ -31,7 +31,7 @@ body {
             #0b0a08 100%
         );
 
-    color: #f7f2e8;
+    color: #f7f2e8 !important;
 
     overflow-x: hidden;
 }
@@ -4479,3 +4479,8 @@ body[data-page="administrador"] .screen.active { display:flex; }
 .velha-placar-linha span{display:flex;flex-direction:column;gap:3px}
 .velha-placar-linha b{color:var(--dourado-claro);font-size:15px}
 @media(max-width:600px){.velha-placares{grid-template-columns:1fr}.velha-placar-bloco{min-height:74px}}
+
+h2 {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
