@@ -823,10 +823,9 @@ if (formAdicionarComida) {
             return;
         }
 
-        let imagem = novaComidaImagem.value.trim() || null;
-
-        // Se o ADM escolher uma imagem do computador, ela é salva
-        // como Data URL para continuar disponível neste navegador.
+        // A imagem do novo prato é escolhida somente pelo seletor de arquivo.
+        // Ela é salva como Data URL para continuar disponível neste navegador.
+        let imagem = null;
         const arquivoImagem = novaComidaImagemArquivo?.files?.[0];
 
         if (arquivoImagem) {
