@@ -3609,6 +3609,46 @@ input:focus-visible {
     transform: translateY(0);
 }
 
+/* Botão Pedir a Conta */
+.btn-pedir-conta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    padding: 16px 22px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(216, 166, 60, 0.25);
+    border-radius: 16px;
+    color: var(--texto);
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    transition: all 0.22s ease;
+}
+
+.btn-pedir-conta:hover {
+    background: rgba(216, 166, 60, 0.09);
+    border-color: rgba(216, 166, 60, 0.45);
+    transform: translateY(-2px);
+}
+
+.btn-pedir-conta.conta-solicitada {
+    background: rgba(111, 196, 138, 0.12);
+    border-color: rgba(111, 196, 138, 0.4);
+}
+
+.btn-pedir-conta.conta-solicitada .btn-garcom-texto strong {
+    color: var(--verde);
+}
+
+.btn-pedir-conta .btn-garcom-texto small {
+    display: block;
+    font-size: 11px;
+    color: var(--texto-secundario);
+    font-weight: 400;
+    margin-top: 2px;
+}
+
 /* Estado: garçom chamado */
 .btn-chamar-garcom.garcom-chamado {
     background: rgba(111, 196, 138, 0.12);
