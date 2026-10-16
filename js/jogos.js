@@ -28,10 +28,7 @@ const btnPedirConta = document.getElementById("btnPedirConta");
 
 if (btnPedirConta) {
     btnPedirConta.addEventListener("click", () => {
-        btnPedirConta.classList.add("conta-solicitada");
-        btnPedirConta.querySelector("strong").textContent = "Conta solicitada!";
-        btnPedirConta.querySelector("small").textContent = "O garçom já está trazendo a conta";
-        mostrarNotificacao("O garçom já está trazendo a conta.");
+        window.location.href = "conta-solicitada.html";
     });
 }
 

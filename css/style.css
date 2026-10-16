@@ -4684,3 +4684,102 @@ body * {
     --bs-body-color-rgb: 247, 242, 232;
 }
 
+
+
+/* Ajustes do botão Pedir a conta e da tela de confirmação */
+#telaPedidoPreparo .preparo-acoes > button.btn-pedir-conta {
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+    width: 100% !important;
+    min-height: 96px;
+    padding: 16px 22px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 20px !important;
+    color: var(--texto) !important;
+    font-family: "Poppins", sans-serif !important;
+    text-align: left !important;
+    box-shadow: none !important;
+    cursor: pointer;
+    transition: background .22s ease, border-color .22s ease, transform .22s ease;
+}
+#telaPedidoPreparo .preparo-acoes > button.btn-pedir-conta:hover {
+    background: rgba(216, 166, 60, 0.09) !important;
+    border-color: rgba(216, 166, 60, 0.45) !important;
+    transform: translateY(-2px);
+}
+#telaPedidoPreparo .btn-pedir-conta .btn-garcom-icone {
+    flex: 0 0 58px;
+    width: 58px;
+    font-size: 32px;
+    text-align: center;
+}
+#telaPedidoPreparo .btn-pedir-conta .btn-garcom-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+#telaPedidoPreparo .btn-pedir-conta .btn-garcom-texto strong {
+    color: var(--texto) !important;
+    font-size: 16px;
+    font-weight: 700;
+}
+#telaPedidoPreparo .btn-pedir-conta .btn-garcom-texto small {
+    color: var(--texto-fraco) !important;
+    font-size: 13px;
+    font-weight: 400;
+}
+.tela-conta-solicitada {
+    min-height: 100vh;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.conta-solicitada-card {
+    width: min(620px, 100%);
+    padding: clamp(28px, 5vw, 48px);
+    text-align: center;
+    align-items: center;
+    background: rgba(32, 27, 19, 0.92) !important;
+    border: 1px solid rgba(216, 166, 60, 0.3) !important;
+    border-radius: 26px !important;
+    box-shadow: 0 18px 60px rgba(0,0,0,.24);
+}
+.conta-solicitada-icone { font-size: 56px; margin-bottom: 18px; }
+.conta-solicitada-card h1 {
+    margin: 12px 0 14px;
+    color: var(--texto) !important;
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(27px, 4vw, 38px);
+    line-height: 1.2;
+}
+.conta-solicitada-card p {
+    margin: 0 0 28px;
+    color: var(--texto-fraco) !important;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+}
+.btn-conta-inicio {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 340px;
+    padding: 15px 22px;
+    border: 1px solid rgba(216, 166, 60, .55);
+    border-radius: 16px;
+    background: linear-gradient(135deg, #d8a63c, #f0c968);
+    color: #211a0e !important;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s ease, filter .2s ease;
+}
+.btn-conta-inicio:hover { transform: translateY(-2px); filter: brightness(1.06); }
+.btn-conta-inicio span:first-child { font-size: 21px; line-height: 1; }
