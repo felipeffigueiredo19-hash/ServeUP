@@ -28,7 +28,11 @@ const btnPedirConta = document.getElementById("btnPedirConta");
 
 if (btnPedirConta) {
     btnPedirConta.addEventListener("click", () => {
-        window.location.href = "conta-solicitada.html";
+        // Abre uma página nova de confirmação, em vez de alterar o próprio botão.
+        const destino = window.location.pathname.includes("/html/")
+            ? "conta-solicitada.html"
+            : "html/conta-solicitada.html";
+        window.location.assign(destino);
     });
 }
 
